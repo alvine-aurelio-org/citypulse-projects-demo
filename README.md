@@ -23,6 +23,22 @@ show the complete planning-to-delivery story.
 **[Capabilities and boundaries](docs/capabilities.md)** ·
 **[Auditable CSV](reports/sprint-1-burndown.csv)**
 
+### Instructor walkthrough — PDF
+
+**[Open the 24-page instructor PDF](docs/instructor-walkthrough.pdf)**
+
+Use the PDF beside the browser: every stop includes the click path, what to show,
+expected figures, a spoken script, an audience question and answer, safety advice,
+and an exit check. Choose the 30–40 minute full route, the 15-minute fast track,
+or the five-minute executive route. It covers all seven views, all four charts,
+native issue hierarchy, dependencies, milestones, risk updates, PRs, Actions,
+automation, troubleshooting, and an optional reversible status demonstration.
+
+Live links and PDF bookmarks make it usable while presenting. Visuals are explicitly
+labeled instructional schematics, not authenticated GitHub screenshots; the burndown
+uses the existing repository chart. The frozen scenario and the intentionally open
+review PR remain unchanged. Presenters do not need to install anything.
+
 ## The environment at a glance
 
 | Capability | Ready-to-demo content |
@@ -110,9 +126,14 @@ to make the ownership discussion useful.
 
 Node.js 24 and the standard GitHub CLI are used by maintainers. There are **no npm
 runtime dependencies**, no PATs or cloud resources, and no credentials in this repository.
+Maintainers run `npm ci --ignore-scripts` to install the pinned development-only
+PDF authoring/validation tools; this is not a presenter setup step.
 
 - `npm test` checks the catalogue, reporting calculations, provisioning safety, and content.
-- `npm run verify` validates checked-in reports, documentation, and source hygiene without GitHub access.
+- `npm run verify` validates reports, documentation, source hygiene, and the actual PDF without GitHub access.
+- `npm run walkthrough:build` regenerates the source-bound PDF using a local Edge/Chromium browser.
+- `npm run walkthrough:verify` checks all 24 pages, full text, bookmarks, tags, safe links, and source hashes.
+- `npm run walkthrough:render` additionally rasterizes every PDF page and creates ignored inspection contact sheets.
 - `npm run verify:live` performs a read-only reconciliation against this exact demo repository and Project.
 - The two `seed:*` scripts require normal GitHub authentication and reconcile existing demo markers;
   they do not create a second repository, delete existing work, or silently duplicate issues.

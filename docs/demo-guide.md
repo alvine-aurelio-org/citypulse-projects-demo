@@ -1,5 +1,14 @@
 # CityPulse: the 15-minute presenter guide
 
+## Instructor PDF
+
+The **[24-page instructor walkthrough](instructor-walkthrough.pdf)** expands this
+quick guide into a full click-by-click script. It includes a 30–40 minute route,
+15-minute fast track, five-minute executive route, expected native values, audience
+questions and answers, safe reset checks, clickable destinations, and troubleshooting.
+Its diagrams are instructional schematics, not GitHub screenshots. The burndown
+reuses the existing repository graphic and retains its illustrative-history disclosure.
+
 ## Before the audience arrives
 
 1. Sign in to GitHub with an account that can read this private repository and its linked Project.
