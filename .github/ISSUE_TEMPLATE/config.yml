@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Start the CityPulse presentation
+    url: https://github.com/alvine-aurelio-org/citypulse-projects-demo
+    about: The README links to the pre-populated Project and the single-sprint burndown.

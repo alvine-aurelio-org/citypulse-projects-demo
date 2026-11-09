@@ -1,0 +1,28 @@
+name: Delivery work item
+description: Capture scoped follow-on work; creating an issue changes the frozen 50-issue demo baseline.
+title: "[Follow-on] "
+labels: [demo]
+body:
+  - type: markdown
+    attributes:
+      value: "This environment already contains exactly 50 seeded issues. Use an existing issue during the demo; create follow-on work only intentionally. Never include real citizen data."
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Citizen or staff outcome
+      description: Who benefits, and what observable change is needed?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List observable criteria, including accessibility and failure cases.
+      value: "- [ ] "
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and risks
+      description: Link prerequisites; use native blocked-by relationships after creating the issue.

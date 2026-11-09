@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="burndown-title burndown-desc" focusable="false" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+  <title id="burndown-title">CityPulse | Digital Service Launch - Sprint 1 - Citizen beta story-point burndown</title>
+  <desc id="burndown-desc">CityPulse | Digital Service Launch. Sprint 1 - Citizen beta, 2026-11-02 to 2026-11-13, 12 calendar days and 10 weekdays. As of 2026-11-09 end of working day 6: 100 committed, 40 completed (40%), 60 actual remaining versus 40 ideal; 20 points behind ideal. Kickoff is start of day; daily marks are weekday end of day. Future actuals are not observed and have no line or projection. ILLUSTRATIVE DEMO HISTORY - not native GitHub event history. Completion days are simulated. Native closedAt records the actual seed run (2026-11-09 in this scenario), not these illustrative dates. No product is implemented.</desc>
+  <defs>
+    <linearGradient id="background" x2="0" y2="1"><stop stop-color="#111d36"/><stop offset="1" stop-color="#0a1224"/></linearGradient>
+    <linearGradient id="actual-fill" x2="0" y2="1"><stop stop-color="#55e6ce" stop-opacity="0.16"/><stop offset="1" stop-color="#55e6ce" stop-opacity="0.01"/></linearGradient>
+  </defs>
+  <rect width="1200" height="650" rx="20" fill="url(#background)"/>
+  <text x="48" y="30" font-size="11" font-weight="600" letter-spacing="1.5" fill="#96abc9">CITYPULSE / FICTIONAL DELIVERY SCENARIO</text>
+  <text x="48" y="66" font-size="28" font-weight="700" fill="#f2f6ff">CityPulse | Digital Service Launch / Sprint burndown</text>
+  <text x="48" y="93" font-size="13.5" fill="#b2c0d8">Sprint 1 - Citizen beta | 02 Nov 2026 - 13 Nov 2026 | 12 calendar days / 10 weekdays</text>
+  <g>
+    <rect x="48" y="118" width="264" height="84" rx="14" fill="#141f36" stroke="#2b3853"/>
+    <rect x="68" y="132" width="28" height="3" rx="1.5" fill="#b6c4df"/>
+    <text x="68" y="163" font-size="25" font-weight="700" fill="#b6c4df">100 committed</text>
+    <text x="68" y="186" font-size="11.5" fill="#acbad3">Fixed kickoff baseline</text>
+  </g>
+  <g>
+    <rect x="328" y="118" width="264" height="84" rx="14" fill="#141f36" stroke="#2b3853"/>
+    <rect x="348" y="132" width="28" height="3" rx="1.5" fill="#55e6ce"/>
+    <text x="348" y="163" font-size="25" font-weight="700" fill="#55e6ce">40 completed</text>
+    <text x="348" y="186" font-size="11.5" fill="#acbad3">40% complete; Done points only</text>
+  </g>
+  <g>
+    <rect x="608" y="118" width="264" height="84" rx="14" fill="#141f36" stroke="#2b3853"/>
+    <rect x="628" y="132" width="28" height="3" rx="1.5" fill="#e3eaf8"/>
+    <text x="628" y="163" font-size="25" font-weight="700" fill="#e3eaf8">60 remaining</text>
+    <text x="628" y="186" font-size="11.5" fill="#acbad3">Unfinished estimates retained in full</text>
+  </g>
+  <g>
+    <rect x="888" y="118" width="264" height="84" rx="14" fill="#141f36" stroke="#2b3853"/>
+    <rect x="908" y="132" width="28" height="3" rx="1.5" fill="#c8b7ff"/>
+    <text x="908" y="163" font-size="25" font-weight="700" fill="#c8b7ff">+20 points</text>
+    <text x="908" y="186" font-size="11.5" fill="#acbad3">behind ideal at 09 Nov EOD</text>
+  </g>
+  <text x="104" y="236" font-size="11" font-weight="600" letter-spacing="1" fill="#aebbd2">REMAINING STORY POINTS</text>
+  <line x1="678" y1="232" x2="710" y2="232" stroke="#55e6ce" stroke-width="3"/>
+  <text x="720" y="236" font-size="12" fill="#d5e0f3">Actual (simulated)</text>
+  <line x1="914" y1="232" x2="946" y2="232" stroke="#c0b5e5" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="956" y="236" font-size="12" fill="#d5e0f3">Ideal (weekday plan)</text>
+  <rect x="728" y="282" width="416" height="210" fill="#b9b4e8" fill-opacity="0.055"/>
+  <text x="936" y="305" text-anchor="middle" font-size="10.5" letter-spacing="0.7" fill="#a8a6c1">FUTURE / NOT OBSERVED</text>
+  <g id="axes">
+    <line x1="104" y1="282" x2="1144" y2="282" stroke="#2a3650"/>
+    <text x="88" y="286" text-anchor="end" font-size="12" fill="#aebbd2">100</text>
+    <line x1="104" y1="324" x2="1144" y2="324" stroke="#2a3650"/>
+    <text x="88" y="328" text-anchor="end" font-size="12" fill="#aebbd2">80</text>
+    <line x1="104" y1="366" x2="1144" y2="366" stroke="#2a3650"/>
+    <text x="88" y="370" text-anchor="end" font-size="12" fill="#aebbd2">60</text>
+    <line x1="104" y1="408" x2="1144" y2="408" stroke="#2a3650"/>
+    <text x="88" y="412" text-anchor="end" font-size="12" fill="#aebbd2">40</text>
+    <line x1="104" y1="450" x2="1144" y2="450" stroke="#2a3650"/>
+    <text x="88" y="454" text-anchor="end" font-size="12" fill="#aebbd2">20</text>
+    <line x1="104" y1="492" x2="1144" y2="492" stroke="#2a3650"/>
+    <text x="88" y="496" text-anchor="end" font-size="12" fill="#aebbd2">0</text>
+    <line x1="104" y1="282" x2="104" y2="492" stroke="#62718e"/>
+    <line x1="104" y1="492" x2="1144" y2="492" stroke="#62718e"/>
+    <g>
+      <line x1="104" y1="492" x2="104" y2="498" stroke="#62718e"/>
+      <text x="104" y="518" text-anchor="middle" font-size="11" fill="#aebbd2">Kickoff</text>
+      <text x="104" y="535" text-anchor="middle" font-size="12" fill="#e0e8f7">02 Nov</text>
+    </g>
+    <g>
+      <line x1="208" y1="492" x2="208" y2="498" stroke="#62718e"/>
+      <text x="208" y="518" text-anchor="middle" font-size="11" fill="#aebbd2">Mon</text>
+      <text x="208" y="535" text-anchor="middle" font-size="12" fill="#e0e8f7">02 Nov</text>
+    </g>
+    <g>
+      <line x1="312" y1="492" x2="312" y2="498" stroke="#62718e"/>
+      <text x="312" y="518" text-anchor="middle" font-size="11" fill="#aebbd2">Tue</text>
+      <text x="312" y="535" text-anchor="middle" font-size="12" fill="#e0e8f7">03 Nov</text>
+    </g>
+    <g>
+      <line x1="416" y1="492" x2="416" y2="498" stroke="#62718e"/>
+      <text x="416" y="518" text-anchor="middle" font-size="11" fill="#aebbd2">Wed</text>
+      <text x="416" y="535" text-anchor="middle" font-size="12" fill="#e0e8f7">04 Nov</text>
+    </g>
+    <g>
+      <line x1="520" y1="492" x2="520" y2="498" stroke="#62718e"/>
+      <text x="520" y="518" text-anchor="middle" font-size="11" fill="#aebbd2">Thu</text>
+      <text x="520" y="535" text-anchor="middle" font-size="12" fill="#e0e8f7">05 Nov</text>
+    </g>
+    <g>
+      <line x1="624" y1="492" x2="624" y2="498" stroke="#62718e"/>
+      <text x="624" y="518" text-anchor="middle" font-size="11" fill="#aebbd2">Fri</text>
+      <text x="624" y="535" text-anchor="middle" font-size="12" fill="#e0e8f7">06 Nov</text>
+    </g>
+    <g>
+      <line x1="728" y1="492" x2="728" y2="498" stroke="#62718e"/>
+      <text x="728" y="518" text-anchor="middle" font-size="11" fill="#aebbd2">Mon</text>
+      <text x="728" y="535" text-anchor="middle" font-size="12" fill="#e0e8f7">09 Nov</text>
+    </g>
+    <g>
+      <line x1="832" y1="492" x2="832" y2="498" stroke="#62718e"/>
+      <text x="832" y="518" text-anchor="middle" font-size="11" fill="#aebbd2">Tue</text>
+      <text x="832" y="535" text-anchor="middle" font-size="12" fill="#e0e8f7">10 Nov</text>
+    </g>
+    <g>
+      <line x1="936" y1="492" x2="936" y2="498" stroke="#62718e"/>
+      <text x="936" y="518" text-anchor="middle" font-size="11" fill="#aebbd2">Wed</text>
+      <text x="936" y="535" text-anchor="middle" font-size="12" fill="#e0e8f7">11 Nov</text>
+    </g>
+    <g>
+      <line x1="1040" y1="492" x2="1040" y2="498" stroke="#62718e"/>
+      <text x="1040" y="518" text-anchor="middle" font-size="11" fill="#aebbd2">Thu</text>
+      <text x="1040" y="535" text-anchor="middle" font-size="12" fill="#e0e8f7">12 Nov</text>
+    </g>
+    <g>
+      <line x1="1144" y1="492" x2="1144" y2="498" stroke="#62718e"/>
+      <text x="1144" y="518" text-anchor="middle" font-size="11" fill="#aebbd2">Fri</text>
+      <text x="1144" y="535" text-anchor="middle" font-size="12" fill="#e0e8f7">13 Nov</text>
+    </g>
+  </g>
+  <path id="actual-area" d="M 104 282 L 208 292.5 L 312 309.3 L 416 326.1 L 520 342.9 L 624 359.7 L 728 366 L 728 492 L 104 492 Z" fill="url(#actual-fill)"/>
+  <path id="ideal-line" d="M 104 282 L 208 303 L 312 324 L 416 345 L 520 366 L 624 387 L 728 408 L 832 429 L 936 450 L 1040 471 L 1144 492" fill="none" stroke="#c0b5e5" stroke-width="2" stroke-dasharray="7 6"/>
+  <path id="actual-line" d="M 104 282 L 208 292.5 L 312 309.3 L 416 326.1 L 520 342.9 L 624 359.7 L 728 366" fill="none" stroke="#55e6ce" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line id="as-of-marker" x1="728" y1="276" x2="728" y2="492" stroke="#55e6ce" stroke-opacity="0.7" stroke-dasharray="4 5"/>
+  <rect x="628" y="250" width="200" height="24" rx="12" fill="#183a44" stroke="#387b7a"/>
+  <text x="728" y="266" text-anchor="middle" font-size="10.5" font-weight="600" fill="#9af4e3">AS OF 09 NOV 2026 | DAY 6/10</text>
+    <g class="report-row" data-date="2026-11-02" data-phase="kickoff" data-ideal-remaining="100" data-actual-remaining="100" data-scope-points="100" data-provenance="ILLUSTRATIVE DEMO HISTORY - not native GitHub event history; simulated completion dates; native closedAt records actual seed time, not backdated delivery; fictional state, no implemented product">
+      <title>2026-11-02 kickoff: ideal 100, actual 100, scope 100 story points. ILLUSTRATIVE DEMO HISTORY - not native GitHub event history.</title>
+      <circle class="ideal-point" cx="104" cy="282" r="3" fill="#c0b5e5"/>
+      <circle class="actual-point" cx="104" cy="282" r="4.5" fill="#55e6ce" stroke="#0b1428" stroke-width="2"/>
+    </g>
+    <g class="report-row" data-date="2026-11-02" data-phase="end-of-day" data-ideal-remaining="90" data-actual-remaining="95" data-scope-points="100" data-provenance="ILLUSTRATIVE DEMO HISTORY - not native GitHub event history; simulated completion dates; native closedAt records actual seed time, not backdated delivery; fictional state, no implemented product">
+      <title>2026-11-02 end-of-day: ideal 90, actual 95, scope 100 story points. ILLUSTRATIVE DEMO HISTORY - not native GitHub event history.</title>
+      <circle class="ideal-point" cx="208" cy="303" r="3" fill="#c0b5e5"/>
+      <circle class="actual-point" cx="208" cy="292.5" r="4.5" fill="#55e6ce" stroke="#0b1428" stroke-width="2"/>
+    </g>
+    <g class="report-row" data-date="2026-11-03" data-phase="end-of-day" data-ideal-remaining="80" data-actual-remaining="87" data-scope-points="100" data-provenance="ILLUSTRATIVE DEMO HISTORY - not native GitHub event history; simulated completion dates; native closedAt records actual seed time, not backdated delivery; fictional state, no implemented product">
+      <title>2026-11-03 end-of-day: ideal 80, actual 87, scope 100 story points. ILLUSTRATIVE DEMO HISTORY - not native GitHub event history.</title>
+      <circle class="ideal-point" cx="312" cy="324" r="3" fill="#c0b5e5"/>
+      <circle class="actual-point" cx="312" cy="309.3" r="4.5" fill="#55e6ce" stroke="#0b1428" stroke-width="2"/>
+    </g>
+    <g class="report-row" data-date="2026-11-04" data-phase="end-of-day" data-ideal-remaining="70" data-actual-remaining="79" data-scope-points="100" data-provenance="ILLUSTRATIVE DEMO HISTORY - not native GitHub event history; simulated completion dates; native closedAt records actual seed time, not backdated delivery; fictional state, no implemented product">
+      <title>2026-11-04 end-of-day: ideal 70, actual 79, scope 100 story points. ILLUSTRATIVE DEMO HISTORY - not native GitHub event history.</title>
+      <circle class="ideal-point" cx="416" cy="345" r="3" fill="#c0b5e5"/>
+      <circle class="actual-point" cx="416" cy="326.1" r="4.5" fill="#55e6ce" stroke="#0b1428" stroke-width="2"/>
+    </g>
+    <g class="report-row" data-date="2026-11-05" data-phase="end-of-day" data-ideal-remaining="60" data-actual-remaining="71" data-scope-points="100" data-provenance="ILLUSTRATIVE DEMO HISTORY - not native GitHub event history; simulated completion dates; native closedAt records actual seed time, not backdated delivery; fictional state, no implemented product">
+      <title>2026-11-05 end-of-day: ideal 60, actual 71, scope 100 story points. ILLUSTRATIVE DEMO HISTORY - not native GitHub event history.</title>
+      <circle class="ideal-point" cx="520" cy="366" r="3" fill="#c0b5e5"/>
+      <circle class="actual-point" cx="520" cy="342.9" r="4.5" fill="#55e6ce" stroke="#0b1428" stroke-width="2"/>
+    </g>
+    <g class="report-row" data-date="2026-11-06" data-phase="end-of-day" data-ideal-remaining="50" data-actual-remaining="63" data-scope-points="100" data-provenance="ILLUSTRATIVE DEMO HISTORY - not native GitHub event history; simulated completion dates; native closedAt records actual seed time, not backdated delivery; fictional state, no implemented product">
+      <title>2026-11-06 end-of-day: ideal 50, actual 63, scope 100 story points. ILLUSTRATIVE DEMO HISTORY - not native GitHub event history.</title>
+      <circle class="ideal-point" cx="624" cy="387" r="3" fill="#c0b5e5"/>
+      <circle class="actual-point" cx="624" cy="359.7" r="4.5" fill="#55e6ce" stroke="#0b1428" stroke-width="2"/>
+    </g>
+    <g class="report-row" data-date="2026-11-09" data-phase="end-of-day" data-ideal-remaining="40" data-actual-remaining="60" data-scope-points="100" data-provenance="ILLUSTRATIVE DEMO HISTORY - not native GitHub event history; simulated completion dates; native closedAt records actual seed time, not backdated delivery; fictional state, no implemented product">
+      <title>2026-11-09 end-of-day: ideal 40, actual 60, scope 100 story points. ILLUSTRATIVE DEMO HISTORY - not native GitHub event history.</title>
+      <circle class="ideal-point" cx="728" cy="408" r="3" fill="#c0b5e5"/>
+      <circle class="actual-point" cx="728" cy="366" r="6" fill="#55e6ce" stroke="#0b1428" stroke-width="2"/>
+    </g>
+    <g class="report-row" data-date="2026-11-10" data-phase="end-of-day" data-ideal-remaining="30" data-actual-remaining="" data-scope-points="100" data-provenance="ILLUSTRATIVE DEMO HISTORY - not native GitHub event history; simulated completion dates; native closedAt records actual seed time, not backdated delivery; fictional state, no implemented product">
+      <title>2026-11-10 end-of-day: ideal 30, actual not observed, scope 100 story points. ILLUSTRATIVE DEMO HISTORY - not native GitHub event history.</title>
+      <circle class="ideal-point" cx="832" cy="429" r="3" fill="#c0b5e5"/>
+    </g>
+    <g class="report-row" data-date="2026-11-11" data-phase="end-of-day" data-ideal-remaining="20" data-actual-remaining="" data-scope-points="100" data-provenance="ILLUSTRATIVE DEMO HISTORY - not native GitHub event history; simulated completion dates; native closedAt records actual seed time, not backdated delivery; fictional state, no implemented product">
+      <title>2026-11-11 end-of-day: ideal 20, actual not observed, scope 100 story points. ILLUSTRATIVE DEMO HISTORY - not native GitHub event history.</title>
+      <circle class="ideal-point" cx="936" cy="450" r="3" fill="#c0b5e5"/>
+    </g>
+    <g class="report-row" data-date="2026-11-12" data-phase="end-of-day" data-ideal-remaining="10" data-actual-remaining="" data-scope-points="100" data-provenance="ILLUSTRATIVE DEMO HISTORY - not native GitHub event history; simulated completion dates; native closedAt records actual seed time, not backdated delivery; fictional state, no implemented product">
+      <title>2026-11-12 end-of-day: ideal 10, actual not observed, scope 100 story points. ILLUSTRATIVE DEMO HISTORY - not native GitHub event history.</title>
+      <circle class="ideal-point" cx="1040" cy="471" r="3" fill="#c0b5e5"/>
+    </g>
+    <g class="report-row" data-date="2026-11-13" data-phase="end-of-day" data-ideal-remaining="0" data-actual-remaining="" data-scope-points="100" data-provenance="ILLUSTRATIVE DEMO HISTORY - not native GitHub event history; simulated completion dates; native closedAt records actual seed time, not backdated delivery; fictional state, no implemented product">
+      <title>2026-11-13 end-of-day: ideal 0, actual not observed, scope 100 story points. ILLUSTRATIVE DEMO HISTORY - not native GitHub event history.</title>
+      <circle class="ideal-point" cx="1144" cy="492" r="3" fill="#c0b5e5"/>
+    </g>
+  <text x="116" y="315" font-size="11" fill="#c6d3e8">100 kickoff (start of day)</text>
+  <text x="742" y="354" text-anchor="start" font-size="12" font-weight="700" fill="#80f1dd">60 actual</text>
+  <text x="742" y="398" text-anchor="start" font-size="12" fill="#d1c4f4">40 ideal</text>
+  <line x1="48" y1="558" x2="1152" y2="558" stroke="#293650"/>
+  <text x="48" y="583" font-size="13" fill="#b5c3db">40% complete | 6 of 10 working days observed | In progress / In review earn no completed credit</text>
+  <text x="48" y="612" font-size="14" font-weight="700" fill="#e2d9ff">ILLUSTRATIVE DEMO HISTORY - not native GitHub event history</text>
+  <text x="48" y="635" font-size="11.5" fill="#a6b5d0">Native closedAt uses real seed-day time (09 Nov 2026 in this scenario), never backdated delivery. No product is implemented.</text>
+</svg>
