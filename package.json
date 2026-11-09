@@ -4,13 +4,23 @@
   "private": true,
   "type": "module",
   "description": "One complete, fictional GitHub Projects delivery environment with exactly 50 issues and one sprint.",
-  "engines": { "node": ">=24" },
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "test": "node --test",
     "report": "node tools/render-reports.mjs",
     "verify": "node tools/verify-content.mjs",
+    "walkthrough:build": "node tools/build-walkthrough.mjs",
+    "walkthrough:verify": "node tools/verify-walkthrough.mjs",
+    "walkthrough:render": "node tools/verify-walkthrough.mjs --render",
     "seed:issues": "node tools/provision-demo.mjs issues --apply",
     "seed:project": "node tools/provision-demo.mjs project --apply",
     "verify:live": "node tools/provision-demo.mjs verify"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "1.1.0",
+    "pdfjs-dist": "6.5.438",
+    "playwright-core": "1.65.0"
   }
 }

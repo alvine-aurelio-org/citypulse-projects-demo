@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "title": "CityPulse Instructor Walkthrough",
+  "scenarioDate": "2026-11-09",
+  "pageCount": 24,
+  "pdf": {
+    "path": "docs/instructor-walkthrough.pdf",
+    "sha256": "5e092c50148a1fc31580d8fb0977d8becf40792736ca3b282c8f668a87517f13",
+    "bytes": 865173
+  },
+  "sources": [
+    {
+      "path": "demo/walkthrough.mjs",
+      "sha256": "5a99db9e7b33925927fe38566e02ebe4a2adaa5055ec8d027312e6095d7b0f7d"
+    },
+    {
+      "path": "demo/catalog.mjs",
+      "sha256": "a9fe3b609556c1165025528a471c10673b9789609f394c0fff66b9b1e7e4b218"
+    },
+    {
+      "path": "lib/walkthrough-renderer.mjs",
+      "sha256": "41ab86f0df20e0d9b28a6dc2a2fa21d27dad42774ef89cadb0ada5495d1ebe2f"
+    },
+    {
+      "path": "tools/build-walkthrough.mjs",
+      "sha256": "01fe3a3dd919e4f7ccc2f032263a70201cfc08fe60828009f4dbe948111a41b4"
+    },
+    {
+      "path": "reports/sprint-1-burndown.svg",
+      "sha256": "a3cce500a1432091c6b15298b8cea1e5b4ffa2216984d2f068093b464a13c241"
+    }
+  ],
+  "generator": {
+    "engine": "Chromium via Playwright",
+    "browserVersion": "157.0.4341.42",
+    "packageVersion": "1.65.0",
+    "note": "Source-bound build; Chromium PDF metadata and system fonts can vary across machines."
+  },
+  "layout": {
+    "pagesChecked": 24,
+    "overflowPages": 0,
+    "minimumSparePixels": 18
+  },
+  "visuals": "Instructional schematics, not GitHub screenshots; the burndown embeds the repository SVG.",
+  "safety": "Build is offline, does not use browser authentication, and does not mutate the live demo."
+}
