@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import { config, workItems, summarize } from '../demo/catalog.mjs';
 import { buildReports, findStaleReports } from '../lib/reporting.mjs';
+import { GUIDE_PDF } from '../lib/walkthrough-renderer.mjs';
+import { validatePublishedWalkthrough } from '../lib/walkthrough-pdf-validation.mjs';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const files = [];
@@ -23,6 +25,11 @@ assert.equal(data.sprintPoints, config.sprint.baselinePoints);
 assert.equal(data.remainingSprintPoints, 60);
 assert.equal(workItems.filter((item) => item.type === 'Bug').length, 8);
 for (const path of files) {
+  if (path.toLowerCase().endsWith('.pdf')) {
+    assert.equal(relative(root, path).replaceAll('\\', '/'), GUIDE_PDF, 'Unregistered binary PDF artifact');
+    assert.equal(readFileSync(path).subarray(0, 5).toString('ascii'), '%PDF-', 'Invalid published PDF header');
+    continue;
+  }
   const text = readFileSync(path, 'utf8').replaceAll('\r\n', '\n');
   assert.ok(text.endsWith('\n') && !text.endsWith('\n\n'), `${relative(root, path)}: one final newline required`);
   assert.doesNotMatch(text, /[ \t]+$/m, `${relative(root, path)}: trailing whitespace`);
@@ -42,4 +49,5 @@ for (const name of ['README.md', 'docs/demo-guide.md', 'docs/capabilities.md']) 
   assert.match(text, /50/);
   assert.match(text, /sprint/i);
 }
-console.log(`PASS: ${files.length} files, exactly 50 issues, 100 sprint points, deterministic reports and source hygiene.`);
+const guide = await validatePublishedWalkthrough(root);
+console.log(`PASS: ${files.length} files, exactly 50 issues, 100 sprint points, deterministic reports and source hygiene; instructor PDF ${guide.pages} pages / ${guide.links} safe links.`);
