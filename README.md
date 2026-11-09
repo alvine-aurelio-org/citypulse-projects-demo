@@ -11,6 +11,11 @@ show the complete planning-to-delivery story.
 > Open **CityPulse | Digital Service Launch**, then choose **03 - Sprint 1 board**.
 > Everything is pre-populated; presenters do not need to seed data or install tools.
 
+**[OPEN THE SPRINT BOARD](https://github.com/orgs/alvine-aurelio-org/projects/11/views/3)** ·
+**[Portfolio](https://github.com/orgs/alvine-aurelio-org/projects/11/views/1)** ·
+**[Roadmap](https://github.com/orgs/alvine-aurelio-org/projects/11/views/4)** ·
+**[Sprint Insights](https://github.com/orgs/alvine-aurelio-org/projects/11/insights/2)**
+
 ![CityPulse Sprint 1 burndown: 100 committed, 40 completed, 60 remaining; illustrative demo history](reports/sprint-1-burndown.svg)
 
 **[Sprint report and daily numbers](reports/sprint-1.md)** ·
@@ -29,7 +34,9 @@ show the complete planning-to-delivery story.
 | Planning fields | Status, Priority, Estimate, Team, Workstream, Risk, Sprint, Start date, Target date |
 | Native issue features | Feature / Task / Bug types, labels, milestones, actual assignees, parent-child progress, dependencies |
 | Delivery horizons | Citizen beta → Operations readiness → Public launch |
-| Reporting | Native Insights for live Project data, plus the single-sprint burndown shown above |
+| Reporting | Four saved native Insights charts, plus the single-sprint burndown shown above |
+| Native automation | Seven enabled rules, including close → Done, reopen → Ready, and linked PR → In review |
+| Pull requests | A merged demo-assembly example and an open design-review example; neither adds a card to the 50-item Project |
 | Presenter experience | A guided 10–15 minute tour, realistic acceptance criteria, risk narrative, and repeatable verification |
 
 **A point is counted once.** Epics have zero estimates; only their delivery children
@@ -40,13 +47,13 @@ contribute to effort. The sprint contains 30 of the 45 child issues. The remaini
 
 | Saved Project view | What to show |
 | --- | --- |
-| **01 - Portfolio backlog** | All 50 issues, priorities, teams, estimates, native types, and hierarchy |
-| **02 - Delivery board** | All 45 delivery children moving through six lifecycle columns |
-| **03 - Sprint 1 board** | Only the 30 committed sprint issues; effort totals tell the delivery story |
-| **04 - Release roadmap** | Five epic date bars and the release horizon, without 45 child rows obscuring the big picture |
-| **05 - Team workload** | Open delivery work grouped by fictional delivery team; points, not just issue count |
-| **06 - Risks and blockers** | Five blocked issues and their native unresolved prerequisites |
-| **07 - Bug triage** | Eight realistic Bug-type issues across the lifecycle |
+| **[01 - Portfolio backlog](https://github.com/orgs/alvine-aurelio-org/projects/11/views/1)** | All 50 issues grouped by Workstream, native hierarchy, Type and sub-issue progress columns |
+| **[02 - Delivery board](https://github.com/orgs/alvine-aurelio-org/projects/11/views/2)** | All 45 delivery children moving through six lifecycle columns with estimate sums |
+| **[03 - Sprint 1 board](https://github.com/orgs/alvine-aurelio-org/projects/11/views/3)** | Only the 30 committed sprint issues; effort totals tell the delivery story |
+| **[04 - Release roadmap](https://github.com/orgs/alvine-aurelio-org/projects/11/views/4)** | Five epic date bars with Sprint and Milestone markers |
+| **[05 - Team workload](https://github.com/orgs/alvine-aurelio-org/projects/11/views/5)** | Open delivery work grouped by fictional delivery team, with count and point sums |
+| **[06 - Risks and blockers](https://github.com/orgs/alvine-aurelio-org/projects/11/views/6)** | Five blocked issues arranged by Workstream, each carrying a real unresolved prerequisite |
+| **[07 - Bug triage](https://github.com/orgs/alvine-aurelio-org/projects/11/views/7)** | Eight native Bug-type issues grouped by Priority |
 
 The Project is organization-owned, as GitHub Projects are. It is explicitly linked
 to this repository and surfaced in its Projects tab; no second repository is required.
@@ -70,6 +77,21 @@ from the issue catalogue. They are **not backdated GitHub events**. Future actua
 blank, never invented. GitHub's native historical Insights chart is a **burn-up**;
 the ready-made burndown here supplies the conventional remaining-versus-ideal view.
 See [reporting provenance](docs/capabilities.md#reporting-provenance).
+
+### Native Insights, ready to open
+
+- **[Delivery status](https://github.com/orgs/alvine-aurelio-org/projects/11/insights/1)** — all 50 issues, Count by Status.
+- **[Sprint 1 - Effort by status](https://github.com/orgs/alvine-aurelio-org/projects/11/insights/2)** — the 100-point sprint, Sum of Estimate by Status.
+- **[Team workload](https://github.com/orgs/alvine-aurelio-org/projects/11/insights/3)** — 140 open delivery points by Team, excluding epics.
+- **[Sprint 1 - Native burn up](https://github.com/orgs/alvine-aurelio-org/projects/11/insights/4)** — native events, November 2–9; real seeded totals appear on November 9.
+
+## Code and review, without changing the 50-issue scope
+
+The repository includes an actual merged assembly pull request and an intentionally
+open design-review pull request for **#8**. Open the **[Pull requests tab](https://github.com/alvine-aurelio-org/citypulse-projects-demo/pulls)**
+to show a real diff and hosted CI. The open design proposal is not an approval and
+must not be merged merely to make the demo look complete. Both PRs stay outside
+the Project's 50 issue cards. See [verified environment details](docs/verification.md).
 
 ## Five workstreams
 

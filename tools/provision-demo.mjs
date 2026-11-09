@@ -54,7 +54,9 @@ export function provisionIssues() {
   const milestones = provisionMilestones();
   const before = list(`${base}/issues?state=all`);
   const existing = ownedIssueMap(before);
-  assert.ok(before.every((issue) => !issue.pull_request), 'Provision issues before creating any demo pull requests');
+  if (before.some((issue) => issue.pull_request)) {
+    assert.equal(existing.size, 50, 'Finish the 50 native issues before adding any pull-request examples');
+  }
   const highest = Math.max(0, ...existing.keys());
   assert.equal(highest, existing.size, 'The existing issue sequence has gaps; do not create duplicate replacements');
   for (const item of workItems) {
@@ -127,6 +129,15 @@ export function fieldValuesFor(item, fields) {
     result.push([field.id, { iterationId: iteration.id }]);
   }
   return result;
+}
+
+export function viewConfigurationFor(layout, fields) {
+  // The public API rejects visibleFieldIds for roadmap views, even though
+  // other view layouts accept that configuration object.
+  if (layout === 'ROADMAP_LAYOUT') return {};
+  const names = ['Title', 'Assignees', 'Status', 'Priority', 'Estimate', 'Team',
+    'Sprint', 'Issue type', 'Parent issue', 'Milestone', 'Risk'];
+  return { configuration: { visibleFieldIds: names.map((name) => fields.get(name)?.id).filter(Boolean) } };
 }
 
 function provisionFields(project) {
@@ -230,17 +241,14 @@ export function provisionProject() {
   for (const [index, desired] of config.views.entries()) {
     let view = views.find((entry) => entry.name === desired.name);
     if (!view && index === 0) view = views.find((entry) => entry.name === 'View 1');
-    const visibleNames = desired.layout === 'ROADMAP_LAYOUT'
-      ? ['Title', 'Status', 'Start date', 'Target date', 'Sub-issues progress']
-      : ['Title', 'Assignees', 'Status', 'Priority', 'Estimate', 'Team', 'Sprint', 'Issue type', 'Parent issue', 'Milestone', 'Risk'];
-    const configuration = { visibleFieldIds: visibleNames.map((name) => fields.get(name)?.id).filter(Boolean) };
+    const display = viewConfigurationFor(desired.layout, fields);
     if (!view) {
       view = mutation('createProjectV2View', 'CreateProjectV2ViewInput', {
-        projectId: project.id, name: desired.name, layout: desired.layout, configuration,
+        projectId: project.id, name: desired.name, layout: desired.layout, ...display,
       }, 'projectV2View{id number name}').projectV2View;
     }
     mutation('updateProjectV2View', 'UpdateProjectV2ViewInput', {
-      viewId: view.id, name: desired.name, layout: desired.layout, filter: desired.filter, configuration,
+      viewId: view.id, name: desired.name, layout: desired.layout, filter: desired.filter, ...display,
     }, 'projectV2View{id number name layout filter}');
     console.log(`Saved view ${view.number}: ${desired.name}`);
   }
@@ -343,11 +351,21 @@ export function verifyLive() {
   assert.equal(completedSprintPoints, expected.completedSprintPoints);
   const views = complete(project.views, 'Project views');
   assert.equal(views.length, config.views.length);
+  const expectedGroups = { 1: 'Workstream', 5: 'Team', 7: 'Priority' };
+  const expectedColumns = { 2: 'Status', 3: 'Status', 6: 'Workstream' };
   for (const desired of config.views) {
     const view = views.find((entry) => entry.name === desired.name);
     assert.ok(view, `Missing saved view ${desired.name}`);
     assert.equal(view.layout, desired.layout);
     assert.equal(view.filter ?? '', desired.filter);
+    if (expectedGroups[view.number]) {
+      assert.deepEqual(complete(view.groupByFields, `${view.name} groups`).map((field) => field.name),
+        [expectedGroups[view.number]]);
+    }
+    if (expectedColumns[view.number]) {
+      assert.deepEqual(complete(view.verticalGroupByFields, `${view.name} columns`).map((field) => field.name),
+        [expectedColumns[view.number]]);
+    }
   }
   const updates = complete(project.statusUpdates, 'Project updates');
   assert.ok(updates.some((entry) => entry.status === 'AT_RISK'
@@ -358,8 +376,9 @@ export function verifyLive() {
     actor: actor.login, issues: issues.size, projectItems: projectItems.length,
     subIssueLinks, dependencyEdges, byStatus, sprintItems, sprintPoints,
     completedSprintPoints, remainingSprintPoints: sprintPoints - completedSprintPoints,
-    views: views.map(({ number, name, layout, filter, groupByFields }) => ({
+    views: views.map(({ number, name, layout, filter, groupByFields, verticalGroupByFields }) => ({
       number, name, layout, filter, groupBy: complete(groupByFields, `${name} grouping`).map((field) => field.name),
+      columns: complete(verticalGroupByFields, `${name} columns`).map((field) => field.name),
     })),
     workflows: complete(project.workflows, 'Project workflows'),
     reportingProvenance: 'Earlier burndown completion dates are illustrative scenario declarations, not native GitHub event history.',

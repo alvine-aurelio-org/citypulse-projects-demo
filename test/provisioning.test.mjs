@@ -3,7 +3,7 @@ import test from 'node:test';
 import { readFileSync } from 'node:fs';
 import { config, workItems } from '../demo/catalog.mjs';
 import { gh, rest, complete, ownedIssueMap, repository, projectMarker } from '../lib/github.mjs';
-import { assigneesFor, milestoneTitle, issueLabels, fieldValuesFor, main } from '../tools/provision-demo.mjs';
+import { assigneesFor, milestoneTitle, issueLabels, fieldValuesFor, viewConfigurationFor, main } from '../tools/provision-demo.mjs';
 
 test('provisioning is bound to the single requested demo repository', () => {
   assert.equal(repository, 'alvine-aurelio-org/citypulse-projects-demo');
@@ -113,6 +113,13 @@ test('missing native options fail instead of selecting the first available value
   const fields = mockFields();
   fields.get('Priority').options = [];
   assert.throws(() => fieldValuesFor(workItems[0], fields), /Missing Priority/);
+});
+
+test('roadmap creation omits unsupported visible-field configuration', () => {
+  const fields = mockFields();
+  assert.deepEqual(viewConfigurationFor('ROADMAP_LAYOUT', fields), {});
+  assert.ok(viewConfigurationFor('TABLE_LAYOUT', fields).configuration.visibleFieldIds.includes('Estimate'));
+  assert.ok(viewConfigurationFor('BOARD_LAYOUT', fields).configuration.visibleFieldIds.includes('Status'));
 });
 
 test('no destructive operations, credential reads, or global context changes are implemented', () => {

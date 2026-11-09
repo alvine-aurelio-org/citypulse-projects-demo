@@ -124,6 +124,15 @@ may also close the issue when the corresponding workflow is enabled; explain the
 actual saved rules before changing anything. Auto-archive is deliberately not used:
 archiving items would remove them from Insights and obscure this fixed demo scope.
 
+### Optional code-to-work demonstration
+
+Open the repository's Pull requests tab. The merged assembly example shows a real
+diff, validation, and merge; the open profile-setup proposal links to **#8** in
+**In review**. It contains a proposed design, not a deployed UI or an approval.
+The enabled linked-PR rule keeps its associated issue in In review. A merge would
+close the linked issue and change the frozen sprint baseline, so leave it open.
+PRs are deliberately not extra Project cards: there are still exactly 50 issues/items.
+
 ## 14:00–15:00 · Wrap up
 
 “One repository connects the why, the delivery work, the dependencies, the sprint,

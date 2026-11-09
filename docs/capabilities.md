@@ -29,7 +29,8 @@ nine native sub-issues. Epics are represented as Feature-type issues with an
 | Ownership | Actual operator assignments plus intentionally unassigned discovery work |
 | Insights | Saved current charts; native historical burn-up starts with real events |
 | Communication | Native At risk Project update with risk, mitigation, and next action |
-| Automation | Native Project workflow settings; no stored Project token in CI |
+| Automation | Seven native rules, including close → Done, reopen → Ready, linked PR → In review |
+| Code-to-work | Merged assembly PR and open design-review PR; no extra Project cards |
 | Repository hygiene | Issue/PR templates, private visibility, no real personal data |
 | Quality | Node built-in tests and an offline, credential-free GitHub Actions workflow |
 
@@ -88,6 +89,12 @@ maintainer operation, not a presentation step. It must not be used to overwrite
 unreviewed audience changes. Native saved layout grouping and chart configuration
 are verified separately through GitHub's UI because not every UI option has a
 public mutation API. Auto-archive remains off to preserve the fixed Insights scope.
+
+The current public GraphQL field list does not expose the built-in **Type** column
+even when it is visible in the native UI. That column was saved and verified through
+the UI; API verification instead checks each issue's native REST type. Roadmap
+date mapping, markers, and all four chart configurations were also saved and
+reloaded in the native UI rather than inferred from a mutation response.
 
 ## Deliberate non-goals
 
